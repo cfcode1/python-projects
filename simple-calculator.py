@@ -1,4 +1,4 @@
-
+print ("Simple Calculator \n----------")
 def add(x, y):
     return int(x) + int(y)
 
@@ -12,14 +12,18 @@ def multiply(x, y):
 
 
 def divide(x, y):
-    return int(x) / int(y)
+    try:
+        return int(x) / int(y)
+    except ZeroDivisionError:
+        return "Cannot divide by zero!"
+
 
 def exp(x, y):
     return int(x)**int(y)
 
 while True:
     var = input("Enter a Number: ")
-    method = input("Choose an option:\nAdd + \nSubtract - \nMultiply x \nDivide / \n ")
+    method = input("Choose an option:\nAdd (+) Subtract (-) Multiply (x) Divide (/)\n ")
     var2 = input("Enter a second number: ")
 
     print("The answer is: ")
